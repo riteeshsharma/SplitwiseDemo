@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.*;
 
-@Component
+@Component("twoSetsSettleUpStrategy")
 public class TwoSetsSettleUpStrategy implements SettleUpStrategy {
     private UserExpenseRepository userExpenseRepository;
 
@@ -79,6 +79,8 @@ public class TwoSetsSettleUpStrategy implements SettleUpStrategy {
                     lessPaid.add(new Pair<>(lessPaidPair.a, lessPaidPair.b + extraPaidPair.b));
                 }
             }
+
+            transactions.add(t);
         }
 
         return transactions;
