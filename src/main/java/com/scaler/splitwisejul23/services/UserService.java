@@ -43,3 +43,7 @@ public class UserService {
         return userRepository.save(user);
     }
 }
+
+
+// ExpenseController
+// splitwise.com/api/settleUp -> SettleUpController
